@@ -1,0 +1,30 @@
+<Organizations>
+    <Organization>
+        <id> 53723419 </id>
+        <name> wefwefe </name>
+        <coordinates>
+            <x> 32 </x>
+            <y> 0.0 </y>
+        </coordinates>
+        <creationDate> 01:58:00.038 08-08-2021 </creationDate>
+        <annualTurnover> 12344 </annualTurnover>
+        <fullName> fqwe </fullName>
+        <employeesCount> 21314 </employeesCount>
+        <type> TRUST </type>
+        <postalAddress> Address@421faab1 </postalAddress>
+    </Organization>
+    <Organization>
+        <id> 123 </id>
+        <name> feqfq </name>
+        <coordinates>
+            <x> 42 </x>
+            <y> 0.0 </y>
+        </coordinates>
+        <creationDate> 02:11:09.821 08-08-2021 </creationDate>
+        <annualTurnover> 12324 </annualTurnover>
+        <fullName> fewfew </fullName>
+        <employeesCount> 23124 </employeesCount>
+        <type> TRUST </type>
+        <postalAddress> Address@2b71fc7e </postalAddress>
+    </Organization>
+</Organizations>
