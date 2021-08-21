@@ -40,7 +40,7 @@ public class DetermineCommand {
                 System.out.println("Коллекция очищена!");
                 break;
             case "save":
-                Scan.parseToXML(orgs,"C:\\Lab 5\\src\\Organizations.xml");
+                Scan.parseToXML(orgs,filename);
                 break;
             case "exit":
                 System.out.println("Конец программы!");
