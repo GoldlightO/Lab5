@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class DetermineCommand {
-    public static LinkedHashSet<Organization> command(String command, LinkedHashSet<Organization> orgs, ArrayList<String> commands, ArrayList<String> previousFilenames, String filename) throws IOException {
+    public static LinkedHashSet<Organization> command(String command, LinkedHashSet<Organization> orgs, ArrayList<String> commands, ArrayList<String> previousFilenames, String filename, Date initializationDate) throws IOException {
         Scanner scanner = new Scanner(command);
         FilterPostalAddress address=new FilterPostalAddress();
         switch (command) {
@@ -27,13 +27,13 @@ public class DetermineCommand {
             case "info":
                 System.out.println("Тип коллекции: " + orgs.getClass());
                 System.out.println("Кол-во элементов коллекции: " + orgs.size());
+                System.out.println("Дата инициализации: " + initializationDate);
                 break;
             case "show":
                 System.out.println(orgs.toString());
                 break;
             case "add":
                 AddOrganization.add(orgs);
-                System.out.println("Элемент создан!");
                 break;
             case "clear":
                 orgs.clear();
@@ -41,7 +41,6 @@ public class DetermineCommand {
                 break;
             case "save":
                 Scan.parseToXML(orgs,"C:\\Lab 5\\src\\Organizations.xml");
-                System.out.println("Сохранено!");
                 break;
             case "exit":
                 System.out.println("Конец программы!");
@@ -115,7 +114,7 @@ public class DetermineCommand {
                         command = scanner.findInLine("\\s\\S+");
                         scanner = new Scanner(command);
                         command = scanner.findInLine("\\S+");
-                        ExecuteScript.newCom(orgs,commands,previousFilenames,filename);
+                        ExecuteScript.newCom(orgs,commands,previousFilenames, command, initializationDate);
                     }catch(NumberFormatException e1){
                         System.out.println("Неверный ввод!");
                     }

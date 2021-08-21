@@ -86,6 +86,8 @@ public class Scan {
                 Organization organization = new Organization(id,name,coordinates,creationDate,annualTurnover, fullName, employeesCount, type, postalAddress);
                 listOfOrganization.add(organization);
             }
+        } catch(FileNotFoundException e){
+            System.out.println("Файл введён неверно!");
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
@@ -105,5 +107,6 @@ public class Scan {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("Сохранено!");
     }
 }
